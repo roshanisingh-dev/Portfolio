@@ -1,10 +1,58 @@
 @media (max-width:768px){
 
-.hero .container,
-.about .container,
-.contact-content{
+/* Navbar */
+
+.menu-toggle{
+    display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+
+    background:#0F172A;
+
+    display:flex;
     flex-direction:column;
-    grid-template-columns:1fr;
+    align-items:center;
+    gap:25px;
+
+    padding:30px 0;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-20px);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility .35s;
+}
+
+.nav-links.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.nav-links a{
+    font-size:1.1rem;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38BDF8;
+}
+/* Hero */
+
+.hero .container{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:40px;
 }
 
 .hero-title{
@@ -15,17 +63,52 @@
     font-size:1.3rem;
 }
 
-.nav-links{
-    display:none;
+.hero-description{
+    max-width:100%;
 }
 
-.projects-grid,
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-image img{
+    width:250px;
+    height:250px;
+}
+
+/* About */
+
+.about .container{
+    flex-direction:column;
+    text-align:center;
+}
+
+/* Projects */
+
+.projects-grid{
+    grid-template-columns:1fr;
+}
+
+/* Skills */
+
 .skills-grid{
     grid-template-columns:1fr;
 }
+
+/* Contact */
+
+.contact-content{
+    grid-template-columns:1fr;
+}
+
+/* Timeline */
 
 .timeline{
     padding-left:20px;
 }
 
+.timeline-dot{
+    left:-29px;
+}
 }
