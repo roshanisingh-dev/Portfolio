@@ -12,8 +12,8 @@ const firebaseConfig = {
     projectId: "roshani-portfolio-39c61",
     storageBucket: "roshani-portfolio-39c61.firebasestorage.app",
     messagingSenderId: "547143795053",
-    appId: "1:547143795053:web:bc13c889ab6d451e66da64"
-};
+    appId: "1:547143795053:web:ef7113bcecb8a6d566da64"
+  };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
